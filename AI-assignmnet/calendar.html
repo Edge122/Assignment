@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar | APU Esports Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+
+
+    <div class="header">
+
+        <a class="logo" href="index.html">
+            APU <span>ESPORTS</span>
+        </a>
+
+        <div class="nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#games">GAME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="calendar.html">CALENDAR</a>
+            <a href="news.html">NEWS</a>
+            <a href="membership.html">JOIN US</a>
+        </div>
+
+    </div>
+
+
+    <div class="section dark-section">
+        <div class="section-content">
+
+            <p class="section-label">PLAN YOUR NEXT SESSION</p>
+            <h1>ACTIVITY CALENDAR.</h1>
+
+            <p>
+                Explore our December activities.
+                Choose a game below to highlight its session.
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="section light-section">
+        <div class="section-content">
+
+            <h2>DECEMBER 2026 ACTIVITIES</h2>
+
+            <table class="part2-table">
+
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                </tr>
+
+
+                <tr id="row-valorant">
+                    <td>5 Dec 2026</td>
+                    <td>VALORANT Beginner Practice</td>
+                    <td>2–4 PM</td>
+                    <td>APU Campus</td>
+                </tr>
+
+                <tr id="row-mlbb">
+                    <td>12 Dec 2026</td>
+                    <td>MLBB Friendly Match</td>
+                    <td>2–5 PM</td>
+                    <td>Online</td>
+                </tr>
+
+                <tr id="row-tft">
+                    <td>19 Dec 2026</td>
+                    <td>TFT Strategy Sharing</td>
+                    <td>3–5 PM</td>
+                    <td>Online</td>
+                </tr>
+
+            </table>
+
+            <p>All times are Malaysia time (MYT).</p>
+
+
+            <label for="calendar-game">Choose a game:</label>
+
+            <select class="part2-select" id="calendar-game">
+                <option value="valorant">VALORANT</option>
+                <option value="mlbb">MLBB</option>
+                <option value="tft">TFT</option>
+            </select>
+
+            <button class="part2-button"
+                    type="button"
+                    id="schedule-button">
+                Highlight activity
+            </button>
+
+            <p>
+              <a class="button" href="events.html">
+    VIEW ACTIVITY DETAILS
+</a>
+            </p>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+
+        <p class="footer-title">APU ESPORTS CLUB</p>
+        <p>Teamwork. Passion. Fair play.</p>
+
+        <p>
+            <a href="enquiry.html">Ask Us a Question</a>
+            |
+            <a href="feedback.html">Share Your Feedback</a>
+        </p>
+
+        <a href="#top">BACK TO TOP ↑</a>
+
+    </div>
+
+    <script>
+        function showSchedule() {
+
+            let game = document.getElementById("calendar-game").value;
+
+  
+            document.getElementById("row-valorant").style.backgroundColor = "";
+            document.getElementById("row-mlbb").style.backgroundColor = "";
+            document.getElementById("row-tft").style.backgroundColor = "";
+
+
+            if (game == "valorant") {
+                document.getElementById("row-valorant").style.backgroundColor =
+                    "#ffd6dc";
+            } else if (game == "mlbb") {
+                document.getElementById("row-mlbb").style.backgroundColor =
+                    "#ffd6dc";
+            } else {
+                document.getElementById("row-tft").style.backgroundColor =
+                    "#ffd6dc";
+            }
+        }
+
+        document.getElementById("schedule-button")
+            .addEventListener("click", showSchedule);
+    </script>
+
+</body>
+</html>

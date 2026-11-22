@@ -1,0 +1,109 @@
+
+.event-toggle:hover {
+
+    background-color: #b71930;
+
+    border-color: #b71930;
+
+}
+
+.event-details {
+
+    display: none;
+
+    border-top: 1px solid #dddddd;
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+}
+
+.event-box .event-details h3 {
+
+    font-size: 17px;
+
+    color: #b71930;
+
+    margin: 0 0 15px;
+
+}
+
+.event-details p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+/* calendar.html */
+
+.part2-button {
+
+    background-color: #b71930;
+
+    color: #ffffff;
+
+    border: 2px solid #b71930;
+
+    padding: 12px 18px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+.part2-button:hover {
+
+    background-color: #851020;
+
+    border-color: #851020;
+
+}
+
+.part2-select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+
+    padding: 10px;
+
+    margin: 12px 0;
+
+}
+
+.part2-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+
+}
+
+.part2-table th,
+
+.part2-table td {
+
+    border: 1px solid #cccccc;
+
+    padding: 8px;
+
+    text-align: left;
+
+}
+
+.part2-table th {
+
+    background-color: #222222;
+
+    color: #ffffff;
+
+
+}

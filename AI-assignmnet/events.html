@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | APU Esports Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="top">
+
+<div class="header">
+
+    <a class="logo" href="index.html">
+        APU <span>ESPORTS</span>
+    </a>
+
+    <div class="nav">
+        <a href="index.html">HOME</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="index.html#games">GAME</a>
+        <a href="events.html">EVENTS</a>
+        <a href="calendar.html">CALENDAR</a>
+        <a href="news.html">NEWS</a>
+        <a href="membership.html">JOIN US</a>
+    </div>
+
+</div>
+
+<div class="section dark-section">
+    <div class="section-content">
+
+        <p class="section-label">PLAY WITH YOUR COMMUNITY</p>
+        <h1>UPCOMING EVENTS.</h1>
+        <p>Choose your game. Find your next challenge.</p>
+
+    </div>
+</div>
+
+<div class="section light-section">
+    <div class="section-content">
+
+
+        <div class="event-box">
+
+            <p class="event-game">VALORANT</p>
+            <h2>CAMPUS SPIKE NIGHT</h2>
+
+            <p class="event-time">
+                5 DEC 2026 · 2–4 PM MYT
+            </p>
+
+            <p>
+                Team up for friendly 5v5 matches
+                and put your tactics to the test.
+            </p>
+
+            <button class="event-toggle"
+                    type="button"
+                    id="valorant-toggle">
+                SHOW DETAILS +
+            </button>
+
+
+            <div class="event-details" id="valorant-details">
+
+                <h3>EVENT DETAILS</h3>
+
+                <p><strong>Venue:</strong> APU Campus</p>
+                <p><strong>Format:</strong> Friendly 5v5 custom matches</p>
+                <p><strong>Who can join:</strong> APU students of all ranks</p>
+
+                <p>
+                    Join with friends or meet teammates at the session.
+                    Teams will be arranged before the matches.
+                </p>
+
+                <p>
+                    <strong>Bring:</strong>
+                    Laptop, charger, mouse and headset.
+                </p>
+
+                <p>
+                    <strong>Fair play:</strong>
+                    No cheating or abusive language.
+                    Respect teammates and opponents.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event-box">
+
+            <p class="event-game">MOBILE LEGENDS: BANG BANG</p>
+            <h2>LAND OF DAWN CLASH</h2>
+
+            <p class="event-time">
+                12 DEC 2026 · 2–5 PM MYT
+            </p>
+
+            <p>
+                Bring your favourite heroes into
+                a friendly community showdown.
+            </p>
+
+            <button class="event-toggle"
+                    type="button"
+                    id="mlbb-toggle">
+                SHOW DETAILS +
+            </button>
+
+            <div class="event-details" id="mlbb-details">
+
+                <h3>EVENT DETAILS</h3>
+
+                <p><strong>Venue:</strong> Online</p>
+                <p><strong>Format:</strong> Friendly 5v5 custom matches</p>
+                <p><strong>Who can join:</strong> APU students of all ranks</p>
+
+                <p>
+                    Practise different hero roles and coordinate
+                    with your team to defend lanes and secure objectives.
+                </p>
+
+                <p>
+                    <strong>Prepare:</strong>
+                    Phone, charger, updated game and stable internet.
+                </p>
+
+                <p>
+                    <strong>Fair play:</strong>
+                    Respect other players and avoid disruptive behaviour.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event-box">
+
+            <p class="event-game">TEAMFIGHT TACTICS</p>
+            <h2>TACTICIAN'S TABLE</h2>
+
+            <p class="event-time">
+                19 DEC 2026 · 3–5 PM MYT
+            </p>
+
+            <p>
+                Build your board, test your ideas
+                and share strategies with other tacticians.
+            </p>
+
+            <button class="event-toggle"
+                    type="button"
+                    id="tft-toggle">
+                SHOW DETAILS +
+            </button>
+
+            <div class="event-details" id="tft-details">
+
+                <h3>EVENT DETAILS</h3>
+
+                <p><strong>Venue:</strong> Online</p>
+                <p><strong>Format:</strong> Strategy sharing and friendly lobbies</p>
+                <p><strong>Who can join:</strong> Beginners and experienced APU players</p>
+
+                <p>
+                    Discuss team compositions, economy and positioning.
+                    Try your ideas in friendly games and compare decisions.
+                </p>
+
+                <p>
+                    <strong>Prepare:</strong>
+                    A supported device, updated TFT and stable internet.
+                    Players must use compatible accounts on the same server.
+                </p>
+
+                <p>
+                    <strong>Fair play:</strong>
+                    Compete individually and do not collude with others.
+                </p>
+
+            </div>
+
+        </div>
+
+        <a class="button" href="calendar.html">
+            VIEW ACTIVITY CALENDAR
+        </a>
+
+    </div>
+</div>
+
+    <div class="footer">
+        <p class="footer-title">APU ESPORTS CLUB</p>
+        <p>Teamwork. Passion. Fair play.</p>
+
+        <p>
+            <a href="enquiry.html">Ask Us a Question</a>
+     |
+            <a href="feedback.html">Share Your Feedback</a>
+        </p>
+        
+        <a href="#top">BACK TO TOP ↑</a>
+    </div>
+
+<script>
+
+    let valorantOpen = false;
+    let mlbbOpen = false;
+    let tftOpen = false;
+
+    function toggleValorant() {
+        if (valorantOpen == false) {
+            document.getElementById("valorant-details").style.display =
+                "block";
+
+            document.getElementById("valorant-toggle").textContent =
+                "HIDE DETAILS −";
+
+            valorantOpen = true;
+        } else {
+            document.getElementById("valorant-details").style.display =
+                "none";
+
+            document.getElementById("valorant-toggle").textContent =
+                "SHOW DETAILS +";
+
+            valorantOpen = false;
+        }
+    }
+
+    function toggleMlbb() {
+        if (mlbbOpen == false) {
+            document.getElementById("mlbb-details").style.display =
+                "block";
+
+            document.getElementById("mlbb-toggle").textContent =
+                "HIDE DETAILS −";
+
+            mlbbOpen = true;
+        } else {
+            document.getElementById("mlbb-details").style.display =
+                "none";
+
+            document.getElementById("mlbb-toggle").textContent =
+                "SHOW DETAILS +";
+
+            mlbbOpen = false;
+        }
+    }
+
+    function toggleTft() {
+        if (tftOpen == false) {
+            document.getElementById("tft-details").style.display =
+                "block";
+
+            document.getElementById("tft-toggle").textContent =
+                "HIDE DETAILS −";
+
+            tftOpen = true;
+        } else {
+            document.getElementById("tft-details").style.display =
+                "none";
+
+            document.getElementById("tft-toggle").textContent =
+                "SHOW DETAILS +";
+
+            tftOpen = false;
+        }
+    }
+
+    document.getElementById("valorant-toggle")
+        .addEventListener("click", toggleValorant);
+
+    document.getElementById("mlbb-toggle")
+        .addEventListener("click", toggleMlbb);
+
+    document.getElementById("tft-toggle")
+        .addEventListener("click", toggleTft);
+</script>
+
+</body>
+</html>

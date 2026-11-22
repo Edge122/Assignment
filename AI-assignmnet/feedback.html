@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | APU Esports Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top" class="registration-page register-design">
+
+    <div class="header">
+
+        <a class="logo" href="index.html">
+            APU <span>ESPORTS</span>
+        </a>
+
+        <div class="nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#games">GAME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="calendar.html">CALENDAR</a>
+            <a href="news.html">NEWS</a>
+            <a href="membership.html">JOIN US</a>
+        </div>
+
+    </div>
+
+    <div class="section dark-section">
+
+        <div class="section-content">
+
+            <p class="section-label">SHARE YOUR THOUGHTS</p>
+            <h1 class="membership-title">YOUR FEEDBACK MATTERS.</h1>
+
+            <p>
+                Tell us what you think about our website
+                or club activity ideas and suggest improvements.
+            </p>
+
+            <p class="notice">
+                Student project demonstration.
+                Please use sample details.
+                No information is sent or saved.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="section light-section">
+
+        <div class="section-content">
+
+            <p class="section-label">HELP US IMPROVE</p>
+            <h2>GIVE YOUR FEEDBACK.</h2>
+
+            <form class="club-form" 
+                  id="feedback-form"
+                  onsubmit="return false;">
+
+                <div class="form-group">
+
+                    <label for="full-name">Full Name (Optional)</label>
+
+                    <input type="text"
+                           id="full-name"
+                           name="fullName"
+                           placeholder="Leave blank to remain anonymous"
+                           maxlength="100">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="topic">Feedback Topic *</label>
+
+                    <select id="topic" name="topic" required>
+
+                        <option value="">-- Select a topic --</option>
+                        <option value="website">Website Experience</option>
+                        <option value="membership">Membership Information</option>
+                        <option value="activities">Proposed Club Activities</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="rating">Your Rating *</label>
+
+                    <select id="rating" name="rating" required>
+
+                        <option value="">-- Select a rating --</option>
+                        <option value="1">1 - Very Dissatisfied</option>
+                        <option value="2">2 - Dissatisfied</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Satisfied</option>
+                        <option value="5">5 - Very Satisfied</option>
+
+                    </select>
+
+                    <p id="rating-result" role="status">
+                        Choose a rating from 1 to 5.
+                    </p>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="comments">Your Comments *</label>
+
+                    <textarea id="comments"
+                              name="comments"
+                              rows="5"
+                              maxlength="1000"
+                              placeholder="Tell us what worked well or what could be improved."
+                              required></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="suggestions">
+                        Suggestions for Improvement (Optional)
+                    </label>
+
+                    <textarea id="suggestions"
+                              name="suggestions"
+                              rows="4"
+                              maxlength="1000"
+                              placeholder="Share an idea for improving the website or planned activities."></textarea>
+
+                </div>
+
+                <p id="feedback-result" class="form-result" role="status">
+                 Complete the form, then click CHECK FEEDBACK.
+                </p>
+
+                <button class="button" 
+                        type="submit"
+                        id="feedback-button">
+                    CHECK FEEDBACK
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <p class="footer-title">APU ESPORTS CLUB</p>
+
+        <p>
+            Student assignment concept.
+            Not an official APU website.
+        </p>
+
+        <p>Teamwork. Passion. Fair play.</p>
+
+        <p>
+            <a href="enquiry.html">Ask Us a Question</a>
+     |
+            <a href="feedback.html">Share Your Feedback</a>
+        </p>
+
+        <a href="#top">BACK TO TOP ↑</a>
+
+    </div>
+
+
+    <script>
+    function showRating() {
+        let rating = document.getElementById("rating").value;
+        let result = document.getElementById("rating-result");
+
+        if (rating == "") {
+            result.textContent = "Choose a rating from 1 to 5.";
+
+        } else {
+            result.textContent =
+                "Your selected rating: " + rating + " out of 5.";
+        }
+    }
+
+
+    function checkFeedback() {
+        let topic = document.getElementById("topic").value;
+        let rating = document.getElementById("rating").value;
+        let comments = document.getElementById("comments").value;
+
+        let result = document.getElementById("feedback-result");
+
+        result.style.backgroundColor = "#fff0f0";
+        result.style.color = "#962626";
+
+        result.textContent =
+            "! Please check that your entries meet the field requirements.";
+
+        if (topic == "") {
+            result.textContent = "! Please select a feedback topic.";
+
+        } else if (rating == "") {
+            result.textContent = "! Please select a rating.";
+
+        } else if (comments == "") {
+            result.textContent = "! Please enter your comments.";
+        }
+    }
+
+
+    function showFeedbackSuccess() {
+        let result = document.getElementById("feedback-result");
+
+        result.textContent =
+            "✓ Feedback checked successfully. Demo only: no information was sent or saved.";
+
+        result.style.backgroundColor = "#eaf7ee";
+        result.style.color = "#205c35";
+    }
+
+
+    document.getElementById("rating")
+        .addEventListener("change", showRating);
+
+    document.getElementById("feedback-button")
+        .addEventListener("click", checkFeedback);
+
+    document.getElementById("feedback-form")
+        .addEventListener("submit", showFeedbackSuccess);
+</script>
+    
+</body>
+</html>
