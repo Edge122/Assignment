@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | APU Esports Club</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+
+<div class="header">
+
+    <a class="logo" href="index.html">
+        APU <span>ESPORTS</span>
+    </a>
+
+    <div class="nav">
+        <a href="index.html">HOME</a>
+        <a href="index.html#about">ABOUT</a>
+
+        <div class="game-dropdown">
+            <button type="button"
+                    id="game-menu-button"
+                    aria-controls="game-menu"
+                    aria-expanded="false">
+                GAME ▾
+            </button>
+
+            <div class="game-dropdown-menu" id="game-menu">
+                <a href="valorant.html">VALORANT</a>
+                <a href="mlbb.html">MLBB</a>
+                <a href="tft.html">TFT</a>
+            </div>
+        </div>
+
+        <a href="events.html">EVENTS</a>
+        <a href="calendar.html">CALENDAR</a>
+        <a href="news.html">NEWS</a>
+        <a href="membership.html">JOIN US</a>
+    </div>
+
+</div>
+
+
+<div class="section light-section">
+    <div class="section-content">
+
+        <p class="section-label">ESPORTS NEWS</p>
+        <h2>LATEST NEWS.</h2>
+
+  
+ <div class="news-card">
+
+    <p class="section-label">VALORANT / CHAMPIONS 2026</p>
+
+<img class="news-image"
+     src="pic-video/loud-win-champs-26-968x544.jpg"
+     alt="LOUD celebrating their VALORANT Champions 2026 victory">
+
+    <div class="news-content">
+
+        <h3>LOUD WIN VALORANT CHAMPIONS SHANGHAI 2026</h3>
+
+        <p class="news-date">
+            Event date: 18 October 2026
+        </p>
+
+        <p>
+            LOUD defeated Team Vitality 3–1 in the grand final
+            of VALORANT Champions 2026 in Shanghai, China.
+            The victory secured their second Champions title,
+            following their first world championship in 2022.
+        </p>
+
+        <p>Source: VLR.gg</p>
+
+        <a href="https://www.vlr.gg/event/2766/valorant-champions-2026"
+           target="_blank"
+           rel="noopener noreferrer">
+            VIEW TOURNAMENT RESULTS →
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="news-card">
+
+    <p class="section-label">LEAGUE OF LEGENDS / WORLDS 2026</p>
+
+    <img class="news-image"
+         src="pic-video/343XBOCWCJJADIAQLUODAJWWXA.avif"
+         alt="Bilibili Gaming celebrating their Worlds 2026 victory">
+
+    <div class="news-content">
+
+        <h3>BLG WIN LEAGUE OF LEGENDS WORLDS 2026</h3>
+
+        <p class="news-date">
+            Event date: 14 November 2026 (New York)
+        </p>
+
+        <p>
+            Bilibili Gaming defeated Gen.G 3–1 in the
+            grand final of the 2026 League of Legends
+            World Championship in Brooklyn, New York.
+            The victory secured BLG their first Worlds title.
+        </p>
+
+        <p>Source: Esports Charts</p>
+
+        <a href="https://escharts.com/tournaments/lol/2026-world-championship/schedule"
+           target="_blank"
+           rel="noopener noreferrer">
+            VIEW TOURNAMENT RESULTS →
+        </a>
+
+    </div>
+
+</div>
+<div class="news-card">
+
+    <p class="section-label">MLBB / TÜRKİYE CHAMPIONSHIP</p>
+
+  
+    <img class="news-image"
+         src="pic-video/47d60e625bc9042339e69705b8248089.jfif"
+         alt="Aurora Gaming celebrating their MLBB Türkiye Championship victory">
+
+    <div class="news-content">
+
+        <h3>AURORA GAMING WIN MLBB TÜRKİYE CHAMPIONSHIP SEASON 8</h3>
+
+        <p class="news-date">
+            Published: 8 November 2026
+        </p>
+
+        <p>
+            Aurora Gaming defeated FUT Esports 4–3 in the
+            grand final to win the Mobile Legends: Bang Bang
+            Türkiye Championship Season 8. The team now
+            looks ahead to the M8 World Championship.
+        </p>
+
+        <p>Source: MOONTON Games</p>
+
+        <a href="https://en.moonton.com/news/396.html"
+           target="_blank"
+           rel="noopener noreferrer">
+            READ FULL ARTICLE →
+        </a>
+
+    </div>
+
+</div>
+
+    </div>
+</div>
+    <div class="footer">
+        <p class="footer-title">APU ESPORTS CLUB</p>
+        <p>Teamwork. Passion. Fair play.</p>
+
+        <p>
+            <a href="enquiry.html">Ask Us a Question</a>
+     |
+            <a href="feedback.html">Share Your Feedback</a>
+        </p>
+        
+        <a href="#top">BACK TO TOP ↑</a>
+    </div>
+
+    <script>
+  
+        let expanded = false;
+
+        function toggleNews() {
+            if (expanded == false) {
+                document.getElementById("news-detail").textContent =
+                    "Start by exploring our three featured games. Read about the activities, prepare your device and join the community through the membership page. Beginners can ask questions and learn at their own pace.";
+
+                document.getElementById("news-button").textContent =
+                    "Read less";
+
+                expanded = true;
+            } else {
+                document.getElementById("news-detail").textContent =
+                    "Discover how beginners can get involved.";
+
+                document.getElementById("news-button").textContent =
+                    "Read more";
+
+                expanded = false;
+            }
+        }
+
+        document.getElementById("news-button")
+            .addEventListener("click", toggleNews);
+    </script>
+<script src="js/jnavigation.js"></script>
+</body>
+</html>

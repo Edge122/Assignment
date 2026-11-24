@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | APU Esports Club</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top" class="registration-page register-design">
+
+    <div class="header">
+
+        <a class="logo" href="index.html">
+            APU <span>ESPORTS</span>
+        </a>
+
+        <div class="nav">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#games">GAME</a>
+            <a href="events.html">EVENTS</a>
+            <a href="calendar.html">CALENDAR</a>
+            <a href="news.html">NEWS</a>
+            <a href="membership.html">JOIN US</a>
+        </div>
+
+    </div>
+
+    <div class="section dark-section">
+
+        <div class="section-content">
+
+            <p class="section-label">GET IN TOUCH</p>
+            <h1 class="membership-title">HAVE A QUESTION?</h1>
+
+            <p>
+                Find out more about membership, games
+                and club activities using the enquiry form below.
+            </p>
+
+            <p class="notice">
+                Student project demonstration.
+                Please use sample details.
+                No information is sent or saved.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="section light-section">
+
+        <div class="section-content">
+
+            <p class="section-label">ASK THE CLUB</p>
+            <h2>YOUR ENQUIRY.</h2>
+
+            <form class="club-form"
+                  id="enquiry-form"
+                  onsubmit="return false">
+
+                <div class="form-group">
+
+                    <label for="full-name">Full Name *</label>
+
+                    <input type="text"
+                           id="full-name"
+                           name="fullName"
+                           placeholder="e.g. Alex Tan"
+                           maxlength="100"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email">Email Address *</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="e.g. alex@example.com"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="category">Enquiry Category *</label>
+
+                    <select id="category"
+                            name="category"
+                            required>
+
+                        <option value="">-- Select a category --</option>
+                        <option value="membership">Membership</option>
+                        <option value="registration">Registration</option>
+                        <option value="games">Games and Practice</option>
+                        <option value="events">Club Events</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="subject">Subject *</label>
+
+                    <input type="text"
+                           id="subject"
+                           name="subject"
+                           placeholder="e.g. Can beginners join?"
+                           maxlength="100"
+                           required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message">Your Message *</label>
+
+                    <textarea id="message"
+                              name="message"
+                              rows="6"
+                              maxlength="1000"
+                              placeholder="Write your question here."
+                              required></textarea>
+
+                </div>
+
+
+                <p id="enquiry-result" class="form-result" role="status">
+                Complete the form, then click CHECK ENQUIRY.
+                </p>
+
+                <button class="button"
+                 type="submit"
+                  id="enquiry-button">
+                 CHECK ENQUIRY
+                </button>
+
+            </form>
+
+            <p>
+                Want to learn more about joining? 
+                <a href="membership.html"> Visit Membership</a>.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <p class="footer-title">APU ESPORTS CLUB</p>
+
+        <p>
+            Student assignment concept.
+            Not an official APU website.
+        </p>
+
+        <p>Teamwork. Passion. Fair play.</p>
+
+        <p>
+            <a href="enquiry.html">Ask Us a Question</a>
+     |
+            <a href="feedback.html">Share Your Feedback</a>
+        </p>
+
+        <a href="#top">BACK TO TOP ↑</a>
+
+    </div>
+
+  <script>
+    function checkEnquiry() {
+        let fullName = document.getElementById("full-name").value;
+        let email = document.getElementById("email").value;
+        let category = document.getElementById("category").value;
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+
+        let result = document.getElementById("enquiry-result");
+
+        result.style.backgroundColor = "#fff0f0";
+        result.style.color = "#962626";
+
+        result.textContent =
+            "! Please complete all required fields and enter a valid email.";
+
+        if (fullName == "") {
+            result.textContent = "! Please enter your full name.";
+
+        } else if (email == "") {
+            result.textContent = "! Please enter your email address.";
+
+        } else if (category == "") {
+            result.textContent = "! Please select an enquiry category.";
+
+        } else if (subject == "") {
+            result.textContent = "! Please enter a subject.";
+
+        } else if (message == "") {
+            result.textContent = "! Please enter your message.";
+        }
+    }
+
+
+    function showEnquirySuccess() {
+        let result = document.getElementById("enquiry-result");
+
+        result.textContent =
+            "✓ Enquiry checked successfully. Demo only: no information was sent or saved.";
+
+        result.style.backgroundColor = "#eaf7ee";
+        result.style.color = "#205c35";
+    }
+
+
+    document.getElementById("enquiry-button")
+        .addEventListener("click", checkEnquiry);
+
+    document.getElementById("enquiry-form")
+        .addEventListener("submit", showEnquirySuccess);
+</script>
+
+</body>
+</html>
